@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Packages & Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="main-nav">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#packages" class="nav-link">Packages</a>
+    <a href="#booking" class="nav-link">Booking</a>
+    <a href="#gallery" class="nav-link">Gallery</a>
+  </nav>
+
+  <section id="home">
+    <h1>Welcome to Travel Explorer</h1>
+    <p>Discover amazing destinations and book your next adventure!</p>
+  </section>
+
+  <section id="packages">
+    <h2>Packages</h2>
+    <table id="packages-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Destination</th>
+          <th>Duration (Days)</th>
+          <th>Base Price</th>
+          <th>Season</th>
+          <th>Final Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS will render rows here -->
+      </tbody>
+    </table>
+  </section>
+
+  <section id="booking">
+    <h2>Booking Price Estimator</h2>
+    <form id="booking-form">
+      <label>Check-in: <input type="date" id="checkin" required></label>
+      <label>Check-out: <input type="date" id="checkout" required></label>
+      <label>Guests: <input type="number" id="guests" min="1" value="1" required></label>
+      <label>Package:
+        <select id="package-select" required></select>
+      </label>
+      <label>Promo Code: <input type="text" id="promo"></label>
+      <div id="total-price">Total: ₹0</div>
+      <button type="submit" id="submit-btn" disabled>Book Now</button>
+    </form>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-thumbs">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=200" data-large="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800" alt="Beach" title="Beach">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=200" data-large="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Mountains" title="Mountains">
+      <img src="https://images.unsplash.com/photo-1515165562835-cf7747b6b3c5?w=200" data-large="https://images.unsplash.com/photo-1515165562835-cf7747b6b3c5?w=800" alt="City" title="City">
+    </div>
+    <div id="modal" class="modal" style="display:none;">
+      <span id="close-modal">&times;</span>
+      <img id="modal-img" src="" alt="" title="">
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
